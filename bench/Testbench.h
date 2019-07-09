@@ -10,6 +10,7 @@
 
 template<class Module>
 class Testbench {
+protected:
     VerilatedVcdC* mpTrace;
     unsigned long mTicks;
     Module* mpCore;

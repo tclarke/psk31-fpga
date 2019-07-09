@@ -9,4 +9,4 @@ set(VERILOG_MODULE_SOURCES
         Vdds_sine__Trace__Slow.h
         )
 
-verilator_create_module(dds_sine "${VERILOG_MODULE_SOURCES}" "" "--trace")
+verilator_create_module(dds_sine "${VERILOG_MODULE_SOURCES}" "" --trace)
