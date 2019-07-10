@@ -10,12 +10,11 @@
 
 template<class Module>
 class Testbench {
-protected:
+public:
     VerilatedVcdC* mpTrace;
     unsigned long mTicks;
     Module* mpCore;
 
-public:
     Testbench() : mTicks(0l), mpTrace(NULL) {
         Verilated::traceEverOn(true);
         mpCore = new Module();

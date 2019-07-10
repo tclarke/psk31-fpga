@@ -24,11 +24,15 @@ int main(int argc, char **argv) {
 
     tb->opentrace("dds_sine_tb.vcd");
     tb->reset();
-    tb->set_tuning_word(15);
+    tb->set_tuning_word(0xff);
 
-    int cnt = 0;
     while(!tb->done()) {
-        if (cnt++ > 100000) {
+        double us = tb->mTicks / 100.;
+        if (us > 10. && us < 20.) {
+            tb->set_tuning_word(0x1ff);
+        } else if (us > 20. && us < 30.) {
+            tb->set_tuning_word(0x8f);
+        } else if (us > 30.) {
             break;
         }
         tb->tick();
