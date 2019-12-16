@@ -15,5 +15,5 @@ verilator_add()
 
 add_subdirectory(src)
 #add_subdirectory(software)
-add_subdirectory(bench)
 add_subdirectory(synthesis)
+add_subdirectory(bench)

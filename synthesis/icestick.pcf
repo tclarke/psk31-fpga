@@ -111,7 +111,7 @@
 #set_io --warn-no-port TR10 119
 #
 # -- Bottom Row
-#set_io --warn-no-port BR3 62
+set_io --warn-no-port sck 62
 #set_io --warn-no-port BR4 61
 #set_io --warn-no-port BR5 60
 #set_io --warn-no-port BR6 56
